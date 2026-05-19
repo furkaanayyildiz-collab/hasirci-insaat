@@ -1292,3 +1292,46 @@ button { font: inherit; }
   position: relative;
   z-index: 2;
 }
+
+.gokturk-section::before {
+  content: "GÖKTÜRK";
+  position: absolute;
+  left: 52px;
+  top: 130px;
+  font-size: clamp(72px, 13vw, 230px);
+  line-height: .8;
+  letter-spacing: -.1em;
+  font-weight: 700;
+  color: rgba(21,23,19,.045);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.gokturk-sticky {
+  padding-top: 80px;
+}
+
+.gokturk-sticky::after {
+  content: "01 / INTERIOR DETAILS";
+  display: block;
+  margin-top: 46px;
+  color: rgba(21,23,19,.42);
+  font-size: 12px;
+  letter-spacing: .28em;
+}
+
+.gokturk-sticky::before {
+  content: "Doğal taş yüzeyler · Sıcak ahşap detaylar · Rafine ışık dili";
+  display: block;
+  margin-top: 42px;
+  max-width: 520px;
+  color: rgba(21,23,19,.54);
+  font-size: 17px;
+  line-height: 1.8;
+  border-top: 1px solid rgba(21,23,19,.14);
+  padding-top: 28px;
+}
+
+.gokturk-section {
+  min-height: 120vh;
+}
