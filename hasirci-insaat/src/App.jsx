@@ -56,6 +56,37 @@ export default function App() {
     { label: 'Mimari', href: '#mimari' },
     { label: 'İletişim', href: '#iletisim' },
   ], [])
+  const statsRef = useRef(null)
+
+const statsInView = useInView(statsRef, {
+  once: true,
+  margin: '-100px',
+})
+
+const [experience, setExperience] = useState(0)
+const [projectsDone, setProjectsDone] = useState(0)
+const [happyClients, setHappyClients] = useState(0)
+
+useEffect(() => {
+  if (!statsInView) return
+
+  const controls = [
+    animate(0, 30, {
+      duration: 1.8,
+      onUpdate: (value) => setExperience(Math.floor(value)),
+    }),
+    animate(0, 18, {
+      duration: 1.6,
+      onUpdate: (value) => setProjectsDone(Math.floor(value)),
+    }),
+    animate(0, 5000, {
+      duration: 2.1,
+      onUpdate: (value) => setHappyClients(Math.floor(value)),
+    }),
+  ]
+
+  return () => controls.forEach((control) => control.stop())
+}, [statsInView])
 
   useEffect(() => {
     document.documentElement.style.scrollBehavior = 'smooth'
