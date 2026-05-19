@@ -811,16 +811,6 @@ button { font: inherit; }
   height: 1px;
 }
 
-.hero-side-meta {
-  position: fixed;
-  right: 54px;
-  top: 48%;
-  transform: translateY(-50%);
-  z-index: 2;
-  color: white;
-  max-width: 240px;
-  text-align: right;
-}
 
 .hero-side-meta span {
   display: block;
@@ -873,6 +863,33 @@ button { font: inherit; }
   .hero-side-meta,
   .hero-bottom-meta,
   .hero-architect-lines {
+    display: none;
+  }
+}
+
+.hero-vertical-meta {
+  position: fixed;
+  right: 34px;
+  top: 46%;
+  z-index: 2;
+  display: flex;
+  gap: 28px;
+  writing-mode: vertical-rl;
+  transform: translateY(-50%);
+  color: rgba(255,255,255,.48);
+  font-size: 11px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.hero-info-card {
+  max-width: 520px;
+  transform: translateY(-20px);
+}
+
+@media (max-width: 900px) {
+  .hero-vertical-meta {
     display: none;
   }
 }
