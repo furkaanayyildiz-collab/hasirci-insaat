@@ -274,7 +274,55 @@ useEffect(() => {
           ))}
         </div>
       </section>
+<section className="process-section">
+  <div className="process-header">
+    <p className="section-kicker">Hasırcı Süreci</p>
+    <h2>Fikirden teslimata, güven veren bir yolculuk.</h2>
+    <p>
+      Her proje; doğru analiz, güçlü mühendislik, rafine tasarım ve titiz uygulama
+      adımlarıyla hayata geçirilir.
+    </p>
+  </div>
 
+  <div className="process-grid">
+    {[
+      {
+        icon: "⌂",
+        title: "Analiz & Konum",
+        text: "Projenin yaşam potansiyeli; lokasyon, ihtiyaç ve kullanıcı beklentileriyle birlikte değerlendirilir.",
+      },
+      {
+        icon: "✦",
+        title: "Mimari Vizyon",
+        text: "Estetik, işlev ve uzun ömürlü değer bir araya getirilerek projeye özgü mimari dil oluşturulur.",
+      },
+      {
+        icon: "▱",
+        title: "Malzeme & Detay",
+        text: "Doğal dokular, güçlü yapı kalitesi ve seçkin detaylar lüks hissini sessizce güçlendirir.",
+      },
+      {
+        icon: "✓",
+        title: "Uygulama & Teslim",
+        text: "Planlanan standartlar, titiz saha yönetimi ve güven veren teslim süreciyle hayata geçirilir.",
+      },
+    ].map((item, index) => (
+      <motion.article
+        key={item.title}
+        className="process-card"
+        initial={{ opacity: 0, y: 45 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.35 }}
+        transition={{ duration: 0.7, delay: index * 0.08 }}
+      >
+        <div className="process-icon">{item.icon}</div>
+        <span>0{index + 1}</span>
+        <h3>{item.title}</h3>
+        <p>{item.text}</p>
+      </motion.article>
+    ))}
+  </div>
+</section>
       <section id="projeler" className="luxury-projects-section">
   <div className="luxury-projects-header">
     <p className="section-kicker">Seçili Projeler</p>
