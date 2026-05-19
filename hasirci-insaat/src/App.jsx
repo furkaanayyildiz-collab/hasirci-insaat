@@ -110,22 +110,22 @@ export default function App() {
 
   {[
     {
-      image: "/images/gokturk/gokturk-exterior-walkway.jpg",
+      image: "/public/images/gokturk/gokturk-exterior-walkway.jpg",
       title: "Peyzajla Bütünleşen Yaşam",
       text: "Açık alanlar, yürüyüş aksları ve doğal dokular; Göktürk Projesi’nde günlük yaşamı daha ferah ve seçkin bir deneyime dönüştürür.",
     },
     {
-      image: "/images/gokturk/gokturk-pool-wellness.jpg",
+      image: "/public/images/gokturk/gokturk-pool-wellness.jpg",
       title: "Wellness Ayrıcalığı",
       text: "Kapalı havuz ve dinlenme alanları, konforu yalnızca daire içinde değil; projenin tüm yaşam ritmine yayar.",
     },
     {
-      image: "/images/gokturk/gokturk-living-room.jpg",
+      image: "/public/images/gokturk/gokturk-living-room.jpg",
       title: "Sakin İç Mekân Dili",
       text: "Yumuşak ışık, sıcak tonlar ve rafine mobilya seçimiyle yaşam alanları sade ama güçlü bir lüks hissi sunar.",
     },
     {
-      image: "/images/gokturk/gokturk-master-bedroom.jpg",
+      image: "/public/images/gokturk/gokturk-master-bedroom.jpg",
       title: "Kişisel Konfor Alanı",
       text: "Master yatak odası; dingin renk paleti, özel aydınlatma ve güçlü malzeme diliyle kişisel bir kaçış alanı olarak tasarlanır.",
     },
