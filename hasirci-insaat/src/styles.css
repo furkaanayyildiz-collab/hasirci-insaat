@@ -237,29 +237,29 @@ button { font: inherit; }
 }
 
 .life-scroll-section {
-  position: relative;
   background: #ebe4d7;
   color: #111;
-  min-height: 260vh;
-  padding: 80px 28px;
+  padding: 90px 28px;
 }
 
 .life-scroll-sticky {
-  position: sticky;
-  top: 110px;
   max-width: 1500px;
   margin: 0 auto;
-  min-height: calc(100vh - 140px);
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 0.9fr 1.1fr;
   gap: 48px;
-  align-items: center;
+  align-items: start;
+}
+
+.life-scroll-copy {
+  position: sticky;
+  top: 130px;
 }
 
 .life-scroll-copy h2 {
-  max-width: 620px;
-  font-size: clamp(52px, 7vw, 118px);
-  line-height: 0.9;
+  max-width: 680px;
+  font-size: clamp(46px, 6vw, 96px);
+  line-height: 0.92;
   letter-spacing: -0.07em;
   font-weight: 300;
   margin: 20px 0 28px;
@@ -273,22 +273,30 @@ button { font: inherit; }
 }
 
 .life-scroll-stage {
-  position: relative;
-  min-height: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
 .life-scroll-card {
-  position: absolute;
+  position: relative;
   overflow: hidden;
   border-radius: 42px;
+  min-height: 520px;
   background: #111;
-  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
 }
 
 .life-scroll-card img {
   width: 100%;
   height: 100%;
+  min-height: 520px;
   object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.life-scroll-card:hover img {
+  transform: scale(1.04);
 }
 
 .life-scroll-card::after {
@@ -317,62 +325,33 @@ button { font: inherit; }
 .life-scroll-card h3 {
   margin-top: 14px;
   max-width: 620px;
-  font-size: clamp(32px, 4vw, 66px);
+  font-size: clamp(32px, 4vw, 58px);
   line-height: 0.95;
   letter-spacing: -0.055em;
   font-weight: 300;
 }
 
-.life-scroll-card-1 {
-  width: 78%;
-  height: 520px;
-  left: 0;
-  top: 0;
-}
-
-.life-scroll-card-2 {
-  width: 48%;
-  height: 360px;
-  right: 0;
-  top: 210px;
-}
-
-.life-scroll-card-3 {
-  width: 58%;
-  height: 390px;
-  left: 16%;
-  top: 430px;
-}
-
 @media (max-width: 900px) {
   .life-scroll-section {
-    min-height: auto;
     padding: 70px 18px;
   }
 
   .life-scroll-sticky {
-    position: relative;
-    top: auto;
     display: block;
-    min-height: auto;
   }
 
-  .life-scroll-stage {
-    min-height: auto;
-    display: grid;
-    gap: 18px;
-    margin-top: 36px;
-  }
-
-  .life-scroll-card,
-  .life-scroll-card-1,
-  .life-scroll-card-2,
-  .life-scroll-card-3 {
+  .life-scroll-copy {
     position: relative;
-    width: 100%;
-    height: 420px;
-    left: auto;
-    right: auto;
     top: auto;
+    margin-bottom: 36px;
+  }
+
+  .life-scroll-card {
+    min-height: 420px;
+    border-radius: 30px;
+  }
+
+  .life-scroll-card img {
+    min-height: 420px;
   }
 }
