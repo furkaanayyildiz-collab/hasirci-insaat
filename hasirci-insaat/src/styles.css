@@ -377,19 +377,6 @@ button { font: inherit; }
     auto;
 }
 
-.gokturk-section::before {
-  content: "GÖKTÜRK";
-  position: absolute;
-  left: 24px;
-  bottom: 18px;
-  font-size: clamp(70px, 14vw, 240px);
-  line-height: 0.8;
-  letter-spacing: -0.08em;
-  font-weight: 700;
-  color: rgba(21, 23, 19, 0.045);
-  pointer-events: none;
-  z-index: 0;
-}
 
 .gokturk-section::after {
   content: "";
@@ -1334,4 +1321,82 @@ button { font: inherit; }
 
 .gokturk-section {
   min-height: 120vh;
+}
+
+.gokturk-story {
+  position: absolute;
+  left: 64px;
+  top: 180px;
+  width: 460px;
+  z-index: 2;
+}
+
+.gokturk-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  color: rgba(25, 27, 22, 0.45);
+  font-size: 12px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+.gokturk-label::before {
+  content: "";
+  width: 54px;
+  height: 1px;
+  background: rgba(25, 27, 22, 0.18);
+}
+
+.gokturk-story h2 {
+  font-size: clamp(38px, 4vw, 68px);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: #151716;
+  margin-bottom: 28px;
+}
+
+.gokturk-story p {
+  color: rgba(21, 23, 19, 0.62);
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 38px;
+}
+
+.gokturk-details {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.gokturk-detail {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(21, 23, 19, 0.1);
+  padding-bottom: 14px;
+  gap: 24px;
+}
+
+.gokturk-detail span:first-child {
+  color: rgba(21, 23, 19, 0.45);
+  font-size: 12px;
+  letter-spacing: .25em;
+}
+
+.gokturk-detail span:last-child {
+  color: #151716;
+  font-size: 14px;
+  letter-spacing: .06em;
+  text-align: right;
+}
+
+@media (max-width: 980px) {
+  .gokturk-story {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+    margin-bottom: 34px;
+  }
 }
