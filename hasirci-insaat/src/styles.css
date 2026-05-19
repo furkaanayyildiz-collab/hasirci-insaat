@@ -1227,3 +1227,68 @@ button { font: inherit; }
     margin-bottom: 50px;
   }
 }
+
+.process-grid {
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,.12);
+  border-left: 1px solid rgba(255,255,255,.08);
+}
+
+.process-card {
+  position: relative;
+  min-height: 430px;
+  border-radius: 0;
+  border: 0;
+  border-right: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.035);
+  overflow: hidden;
+}
+
+.process-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(190,128,56,.28), transparent 42%);
+  opacity: 0;
+  transition: .35s ease;
+}
+
+.process-card::after {
+  content: attr(data-step);
+  position: absolute;
+  right: 24px;
+  bottom: -18px;
+  font-size: 130px;
+  line-height: 1;
+  letter-spacing: -.08em;
+  color: rgba(255,255,255,.045);
+  font-weight: 600;
+}
+
+.process-card:hover::before {
+  opacity: 1;
+}
+
+.process-card:hover {
+  transform: translateY(-14px);
+  background: rgba(255,255,255,.07);
+}
+
+.process-icon {
+  margin-bottom: 95px;
+  background: rgba(255,255,255,.08);
+  box-shadow: 0 0 40px rgba(190,128,56,.12);
+}
+
+.process-card h3 {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(34px, 3vw, 54px);
+}
+
+.process-card p,
+.process-card span,
+.process-icon {
+  position: relative;
+  z-index: 2;
+}
