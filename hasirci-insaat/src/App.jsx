@@ -310,6 +310,7 @@ useEffect(() => {
       <motion.article
         key={item.title}
         className="process-card"
+data-step={`0${index + 1}`}
         initial={{ opacity: 0, y: 45 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.35 }}
