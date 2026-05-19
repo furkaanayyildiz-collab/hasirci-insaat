@@ -1,4 +1,3 @@
-import React, { useEffect, useMemo, useState } from 'react'
 import {
   motion,
   useScroll,
@@ -161,6 +160,45 @@ useEffect(() => {
           </div>
         </motion.div>
       </section>
+      <section className="stats-section" ref={statsRef}>
+  <div className="stats-overlay" />
+
+  <div className="stats-content">
+    <h2>
+      Geleceğe yön veren yapılar <br />
+      oluşturuyoruz.
+    </h2>
+
+    <div className="stats-grid">
+      <div className="stat-item">
+        <h3>{experience}+</h3>
+        <span>Yılı Aşan Tecrübe</span>
+        <p>
+          İnşaat sektöründe uzun yıllardır yaşam kalitesini
+          yükselten projelere imza atıyoruz.
+        </p>
+      </div>
+
+      <div className="stat-item">
+        <h3>{projectsDone}</h3>
+        <span>Tamamlanan Proje</span>
+        <p>
+          Her tamamlanan proje, yeni yaşam alanlarının
+          temelini oluşturur.
+        </p>
+      </div>
+
+      <div className="stat-item">
+        <h3>{happyClients}+</h3>
+        <span>Memnun Müşteri</span>
+        <p>
+          Güvenle teslim edilen binlerce yaşam alanının
+          verdiği deneyim.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="yasam" className="editorial-section">
   <div className="editorial-intro">
     <p>GÖKTÜRK PROJESİ</p>
