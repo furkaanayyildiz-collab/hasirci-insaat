@@ -110,25 +110,25 @@ export default function App() {
 
   {[
     {
-      image: "/public/images/gokturk/gokturk-exterior-walkway.jpg",
-      title: "Peyzajla Bütünleşen Yaşam",
-      text: "Açık alanlar, yürüyüş aksları ve doğal dokular; Göktürk Projesi’nde günlük yaşamı daha ferah ve seçkin bir deneyime dönüştürür.",
-    },
-    {
-      image: "/public/images/gokturk/gokturk-pool-wellness.jpg",
-      title: "Wellness Ayrıcalığı",
-      text: "Kapalı havuz ve dinlenme alanları, konforu yalnızca daire içinde değil; projenin tüm yaşam ritmine yayar.",
-    },
-    {
-      image: "/public/images/gokturk/gokturk-living-room.jpg",
-      title: "Sakin İç Mekân Dili",
-      text: "Yumuşak ışık, sıcak tonlar ve rafine mobilya seçimiyle yaşam alanları sade ama güçlü bir lüks hissi sunar.",
-    },
-    {
-      image: "/public/images/gokturk/gokturk-master-bedroom.jpg",
-      title: "Kişisel Konfor Alanı",
-      text: "Master yatak odası; dingin renk paleti, özel aydınlatma ve güçlü malzeme diliyle kişisel bir kaçış alanı olarak tasarlanır.",
-    },
+  image: "/public/images/gokturk/gokturk-exterior-walkway.jpg",
+  title: "Peyzajla Bütünleşen Yaşam",
+  text: "Açık alanlar, yürüyüş aksları ve doğal dokular; Göktürk Projesi’nde günlük yaşamı daha ferah ve seçkin bir deneyime dönüştürür.",
+},
+{
+  image: "/public/images/gokturk/gokturk-pool-wellness.jpg",
+  title: "Wellness Ayrıcalığı",
+  text: "Kapalı havuz ve dinlenme alanları, konforu yalnızca daire içinde değil; projenin tüm yaşam ritmine yayar.",
+},
+{
+  image: "/public/images/gokturk/gokturk-living-room.jpg",
+  title: "Sakin İç Mekân Dili",
+  text: "Yumuşak ışık, sıcak tonlar ve rafine mobilya seçimiyle yaşam alanları sade ama güçlü bir lüks hissi sunar.",
+},
+{
+  image: "/public/images/gokturk/gokturk-master-bedroom.jpg",
+  title: "Kişisel Konfor Alanı",
+  text: "Master yatak odası; dingin renk paleti, özel aydınlatma ve güçlü malzeme diliyle kişisel bir kaçış alanı olarak tasarlanır.",
+},
   ].map((item, index) => (
     <motion.section
       key={item.title}
