@@ -99,40 +99,51 @@ export default function App() {
           </div>
         </motion.div>
       </section>
-
-     <section id="yasam" className="life-scroll-section">
-  <div className="life-scroll-sticky">
-    <div className="life-scroll-copy">
-      <p className="section-kicker">Hasırcı Yaşamı</p>
-      <h2>Her detay, daha güçlü bir yaşam için.</h2>
-      <p>
-        Mimari kalite, güvenli yapı anlayışı ve konforlu yaşam alanları aynı çizgide buluşur.
-      </p>
-    </div>
-
-    <div className="life-scroll-stage">
-      {[
-        ['01 / Konfor', 'Günlük hayatı kolaylaştıran sakin lüks.', projectImages[0]],
-        ['02 / Mahremiyet', 'Kalabalıktan uzak, hayatın merkezine yakın.', projectImages[1]],
-        ['03 / Mimari', 'Zamansız çizgiler, güçlü yapı dili.', projectImages[2]],
-      ].map(([kicker, title, image], index) => (
-        <motion.article
-          key={title}
-          className={`life-scroll-card life-scroll-card-${index + 1}`}
-          initial={{ opacity: 0, y: 90, scale: 0.92 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: false, amount: 0.45 }}
-          transition={{ duration: 0.85, ease: 'easeOut' }}
-        >
-          <img src={image} alt={title} />
-          <div>
-            <span>{kicker}</span>
-            <h3>{title}</h3>
-          </div>
-        </motion.article>
-      ))}
-    </div>
+<section id="yasam" className="editorial-section">
+  <div className="editorial-intro">
+    <p>GÖKTÜRK PROJESİ</p>
+    <h2>
+      İç mekânda <br />
+      sakin lüks.
+    </h2>
   </div>
+
+  {[
+    {
+      image: "/images/gokturk/gokturk-banyo-hero.jpg",
+      title: "Göktürk Residence",
+      text: "Doğal taş yüzeyler, sıcak ahşap detaylar ve zamansız mimari dili.",
+    },
+    {
+      image: "/images/gokturk/gokturk-banyo-detail.jpg",
+      title: "Malzeme Detayı",
+      text: "Yakın planda premium malzeme hissi ve rafine detay yaklaşımı.",
+    },
+    {
+      image: "/images/gokturk/gokturk-banyo-front.jpg",
+      title: "Sessiz Konfor",
+      text: "Sadelik, dinginlik ve uzun ömürlü yaşam anlayışı.",
+    },
+  ].map((item, index) => (
+    <motion.section
+      key={index}
+      className="editorial-panel"
+      initial={{ opacity: 0, y: 90 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.25 }}
+      transition={{ duration: 1 }}
+    >
+      <div className="editorial-image-wrap">
+        <img src={item.image} alt={item.title} />
+      </div>
+
+      <div className="editorial-content">
+        <span>0{index + 1}</span>
+        <h3>{item.title}</h3>
+        <p>{item.text}</p>
+      </div>
+    </motion.section>
+  ))}
 </section>
 
       <section className="gokturk-section">
