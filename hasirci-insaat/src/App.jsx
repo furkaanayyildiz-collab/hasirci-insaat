@@ -85,6 +85,24 @@ export default function App() {
       <section id="top" className="hero-section">
         <motion.img src={heroImage} alt="Hasırcı İnşaat gece proje renderı" className="hero-image" style={{ scale: heroScale }} />
         <div className="hero-overlay" />
+        <div className="hero-architect-lines">
+  <span />
+  <span />
+  <span />
+</div>
+
+<div className="hero-side-meta">
+  <span>01</span>
+  <p>Göktürk Residence</p>
+  <small>Premium yaşam alanları</small>
+</div>
+
+<div className="hero-bottom-meta">
+  <span>Hasırcı İnşaat</span>
+  <span>Residence</span>
+  <span>Göktürk</span>
+  <span>2026</span>
+</div>
 
         <motion.div className="hero-content" style={{ y: heroTextY, opacity: heroTextOpacity }}>
           <div className="hero-info-card">
