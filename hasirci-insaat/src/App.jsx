@@ -91,10 +91,9 @@ export default function App() {
   <span />
 </div>
 
-<div className="hero-side-meta">
-  <span>01</span>
-  <p>Göktürk Residence</p>
-  <small>Premium yaşam alanları</small>
+<div className="hero-vertical-meta">
+  <span>Göktürk Residence</span>
+  <span>Premium Yaşam</span>
 </div>
 
 <div className="hero-bottom-meta">
