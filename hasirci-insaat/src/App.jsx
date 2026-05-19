@@ -174,28 +174,58 @@ export default function App() {
         </div>
       </section>
 
-      <section id="projeler" className="projects-section">
-        <div className="section-heading split-heading light">
-          <div>
-            <p className="section-kicker">Seçili Projeler</p>
-            <h2>Proje değil, yaşam sahnesi.</h2>
-          </div>
-          <p>Görsel büyük, bilgi net, geçişler sakin. Kullanıcı aradığını kolayca bulur.</p>
-        </div>
+      <section id="projeler" className="projects-showcase-section">
+  <div className="projects-showcase-heading">
+    <p className="section-kicker">Seçili Projeler</p>
+    <h2>Projelerimiz</h2>
+  </div>
 
-        <div className="project-grid">
-          {['Göktürk', 'Sahil Residence', 'Garden Suites'].map((project, index) => (
-            <motion.article key={project} className="project-card" initial={{ opacity: 0, y: 45 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.75, delay: index * 0.08 }}>
-              <img src={index === 0 ? gokturkImages[0] : projectImages[index]} alt={project} loading="lazy" />
-              <div>
-                <span>0{index + 1}</span>
-                <h3>{project}</h3>
-                <button>İncele <ArrowUpRight size={16} /></button>
-              </div>
-            </motion.article>
-          ))}
+  <div className="project-carousel">
+    {[
+      {
+        title: "Göktürk",
+        text: "Peyzaj, iç mekan ve sosyal yaşam alanlarıyla seçkin bir yaşam deneyimi.",
+        image: "/images/gokturk/gokturk-exterior-walkway.jpg",
+      },
+      {
+        title: "Sahil Residence",
+        text: "Konforu dengeleyen modern mimari ve güçlü yaşam standartları.",
+        image: projectImages[1],
+      },
+      {
+        title: "Garden Suites",
+        text: "Doğayla temas eden, sakin ve zamansız yaşam alanları.",
+        image: projectImages[2],
+      },
+    ].map((project, index) => (
+      <motion.article
+        key={project.title}
+        className={`carousel-card carousel-card-${index + 1}`}
+        initial={{ opacity: 0, y: 70, scale: 0.92 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, delay: index * 0.08 }}
+      >
+        <img src={project.image} alt={project.title} loading="lazy" />
+        <div className="carousel-card-content">
+          <span>0{index + 1}</span>
+          <h3>{project.title}</h3>
+          <p>{project.text}</p>
         </div>
-      </section>
+      </motion.article>
+    ))}
+  </div>
+
+  <div className="carousel-dots">
+    <span />
+    <span className="active" />
+    <span />
+  </div>
+
+  <a href="#iletisim" className="all-projects-button">
+    Tüm projeleri gör <ArrowUpRight size={18} />
+  </a>
+</section>
 
       <section id="mimari" className="architecture-section">
         <div className="architecture-image">
