@@ -253,6 +253,40 @@ useEffect(() => {
 </section>
 
       <section className="gokturk-section">
+        <div className="gokturk-story">
+    <div className="gokturk-label">
+      GÖKTÜRK PROJESİ
+    </div>
+
+    <h2>
+      Rafine detaylarla şekillenen sakin yaşam.
+    </h2>
+
+    <p>
+      Göktürk projesinde iç mekân dili; doğal taş yüzeyler,
+      sıcak ahşap dokular ve yumuşak ışık katmanlarıyla
+      zamansız bir yaşam atmosferi oluşturur. Her detay,
+      konforu gösterişten uzak ama güçlü bir şekilde hissettirmek
+      için tasarlanmıştır.
+    </p>
+
+    <div className="gokturk-details">
+      <div className="gokturk-detail">
+        <span>MALZEME</span>
+        <span>Doğal taş & sıcak ahşap</span>
+      </div>
+
+      <div className="gokturk-detail">
+        <span>TASARIM DİLİ</span>
+        <span>Minimal & rafine</span>
+      </div>
+
+      <div className="gokturk-detail">
+        <span>ATMOSFER</span>
+        <span>Sakin, seçkin, zamansız</span>
+      </div>
+    </div>
+  </div>
         <div className="gokturk-sticky">
           <p className="section-kicker">Göktürk Projesi</p>
           <h2>Detaylarda konfor, malzemede zarafet.</h2>
