@@ -641,3 +641,138 @@ button { font: inherit; }
     padding: 20px 24px;
   }
 }
+
+.luxury-projects-section {
+  position: relative;
+  z-index: 3;
+  background:
+    radial-gradient(circle at 80% 10%, rgba(190, 128, 56, 0.16), transparent 34%),
+    #0d100d;
+  color: #fff;
+  padding: 120px 36px;
+}
+
+.luxury-projects-header {
+  max-width: 1500px;
+  margin: 0 auto 70px;
+}
+
+.luxury-projects-header .section-kicker {
+  color: rgba(255,255,255,.42);
+  margin-bottom: 22px;
+}
+
+.luxury-projects-header h2 {
+  max-width: 980px;
+  margin: 0;
+  font-size: clamp(54px, 8vw, 128px);
+  line-height: .86;
+  letter-spacing: -.08em;
+  font-weight: 300;
+}
+
+.luxury-project-row {
+  max-width: 1500px;
+  margin: 0 auto;
+  min-height: 230px;
+  display: grid;
+  grid-template-columns: 90px 360px 1fr auto;
+  gap: 34px;
+  align-items: center;
+  padding: 28px 0;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+
+.luxury-project-row:last-child {
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.luxury-project-number {
+  color: rgba(255,255,255,.36);
+  letter-spacing: .28em;
+  font-size: 13px;
+}
+
+.luxury-project-image {
+  height: 190px;
+  border-radius: 30px;
+  overflow: hidden;
+  background: rgba(255,255,255,.06);
+}
+
+.luxury-project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .9s ease;
+}
+
+.luxury-project-row:hover .luxury-project-image img {
+  transform: scale(1.08);
+}
+
+.luxury-project-copy p {
+  margin: 0 0 16px;
+  color: rgba(255,255,255,.42);
+  font-size: 12px;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+}
+
+.luxury-project-copy h3 {
+  margin: 0;
+  font-size: clamp(42px, 6vw, 92px);
+  line-height: .9;
+  letter-spacing: -.07em;
+  font-weight: 300;
+}
+
+.luxury-project-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.8);
+  border-radius: 999px;
+  padding: 14px 22px;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: 12px;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.luxury-project-button:hover {
+  background: #fff;
+  color: #111;
+}
+
+@media (max-width: 900px) {
+  .luxury-projects-section {
+    padding: 84px 18px;
+  }
+
+  .luxury-project-row {
+    display: block;
+    min-height: auto;
+    padding: 30px 0;
+  }
+
+  .luxury-project-number {
+    margin-bottom: 16px;
+  }
+
+  .luxury-project-image {
+    height: 360px;
+    margin-bottom: 24px;
+  }
+
+  .luxury-project-copy h3 {
+    font-size: 52px;
+  }
+
+  .luxury-project-button {
+    margin-top: 22px;
+  }
+}
