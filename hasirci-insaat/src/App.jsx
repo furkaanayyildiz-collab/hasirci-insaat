@@ -1,5 +1,19 @@
 import React, { useEffect, useMemo, useState } from 'react'
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  useInView,
+  animate
+} from 'framer-motion'
+
+import React, {
+  useEffect,
+  useMemo,
+  useState,
+  useRef
+} from 'react'
 import { ArrowUpRight, Menu, X } from 'lucide-react'
 
 const heroImage = '/images/hero-night.jpg'
