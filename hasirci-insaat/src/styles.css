@@ -893,3 +893,89 @@ button { font: inherit; }
     display: none;
   }
 }
+
+.stats-section {
+  position: relative;
+  min-height: 90vh;
+  background: url('/images/hero-night.jpg') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.stats-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(12, 14, 14, 0.55),
+      rgba(12, 14, 14, 0.82)
+    );
+  backdrop-filter: blur(6px);
+}
+
+.stats-content {
+  position: relative;
+  z-index: 2;
+  width: min(1400px, 92%);
+  text-align: center;
+  color: #f5f1ea;
+}
+
+.stats-content h2 {
+  font-size: clamp(42px, 5vw, 84px);
+  line-height: 1.05;
+  font-weight: 300;
+  margin-bottom: 90px;
+  letter-spacing: -0.04em;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.stat-item {
+  border-top: 1px solid rgba(255,255,255,0.18);
+  padding-top: 34px;
+}
+
+.stat-item h3 {
+  font-size: clamp(58px, 7vw, 110px);
+  font-weight: 500;
+  margin: 0;
+}
+
+.stat-item span {
+  display: block;
+  font-size: 20px;
+  margin-top: 8px;
+  color: rgba(255,255,255,0.85);
+}
+
+.stat-item p {
+  margin-top: 28px;
+  font-size: 18px;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.68);
+  max-width: 360px;
+  margin-inline: auto;
+}
+
+@media (max-width: 900px) {
+  .stats-section {
+    padding: 120px 24px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .stats-content h2 {
+    margin-bottom: 56px;
+  }
+}
