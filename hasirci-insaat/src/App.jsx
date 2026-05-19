@@ -100,40 +100,40 @@ export default function App() {
         </motion.div>
       </section>
 
-      <section id="yasam" className="life-section">
-        <div className="section-heading split-heading">
+     <section id="yasam" className="life-scroll-section">
+  <div className="life-scroll-sticky">
+    <div className="life-scroll-copy">
+      <p className="section-kicker">Hasırcı Yaşamı</p>
+      <h2>Her detay, daha güçlü bir yaşam için.</h2>
+      <p>
+        Mimari kalite, güvenli yapı anlayışı ve konforlu yaşam alanları aynı çizgide buluşur.
+      </p>
+    </div>
+
+    <div className="life-scroll-stage">
+      {[
+        ['01 / Konfor', 'Günlük hayatı kolaylaştıran sakin lüks.', projectImages[0]],
+        ['02 / Mahremiyet', 'Kalabalıktan uzak, hayatın merkezine yakın.', projectImages[1]],
+        ['03 / Mimari', 'Zamansız çizgiler, güçlü yapı dili.', projectImages[2]],
+      ].map(([kicker, title, image], index) => (
+        <motion.article
+          key={title}
+          className={`life-scroll-card life-scroll-card-${index + 1}`}
+          initial={{ opacity: 0, y: 90, scale: 0.92 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: false, amount: 0.45 }}
+          transition={{ duration: 0.85, ease: 'easeOut' }}
+        >
+          <img src={image} alt={title} />
           <div>
-            <p className="section-kicker">Hasırcı Yaşamı</p>
-            <h2>Her detay, daha güçlü bir yaşam için.</h2>
+            <span>{kicker}</span>
+            <h3>{title}</h3>
           </div>
-          <p>Mimari kalite, güvenli yapı anlayışı ve konforlu yaşam alanları aynı çizgide buluşur.</p>
-        </div>
-
-        <div className="life-grid">
-          <motion.article className="life-card life-card-large" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.75 }}>
-            <img src={projectImages[0]} alt="Konforlu yaşam" />
-            <div>
-              <span>01 / Konfor</span>
-              <h3>Günlük hayatı kolaylaştıran sakin lüks.</h3>
-            </div>
-          </motion.article>
-
-          <div className="life-stack">
-            {[
-              ['02 / Mahremiyet', 'Kalabalıktan uzak, hayatın merkezine yakın.', projectImages[1]],
-              ['03 / Mimari', 'Zamansız çizgiler, güçlü yapı dili.', projectImages[2]],
-            ].map(([kicker, title, image], index) => (
-              <motion.article key={title} className="life-card" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.7, delay: index * 0.08 }}>
-                <img src={image} alt={title} />
-                <div>
-                  <span>{kicker}</span>
-                  <h3>{title}</h3>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-        </div>
-      </section>
+        </motion.article>
+      ))}
+    </div>
+  </div>
+</section>
 
       <section className="gokturk-section">
         <div className="gokturk-sticky">
