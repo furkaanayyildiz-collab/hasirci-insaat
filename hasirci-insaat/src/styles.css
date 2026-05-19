@@ -361,3 +361,96 @@ button { font: inherit; }
     max-width: 100%;
   }
 }
+
+.gokturk-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(21, 23, 19, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(21, 23, 19, 0.035) 1px, transparent 1px),
+    radial-gradient(circle at 78% 28%, rgba(179, 119, 54, 0.18), transparent 32%),
+    #ebe4d7;
+  background-size:
+    72px 72px,
+    72px 72px,
+    auto,
+    auto;
+}
+
+.gokturk-section::before {
+  content: "GÖKTÜRK";
+  position: absolute;
+  left: 24px;
+  bottom: 18px;
+  font-size: clamp(70px, 14vw, 240px);
+  line-height: 0.8;
+  letter-spacing: -0.08em;
+  font-weight: 700;
+  color: rgba(21, 23, 19, 0.045);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gokturk-section::after {
+  content: "";
+  position: absolute;
+  inset: 70px 36px;
+  border: 1px solid rgba(179, 119, 54, 0.16);
+  border-radius: 42px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gokturk-sticky,
+.gokturk-gallery {
+  position: relative;
+  z-index: 1;
+}
+
+.gokturk-sticky h2 {
+  position: relative;
+}
+
+.gokturk-sticky h2::after {
+  content: "";
+  display: block;
+  width: 96px;
+  height: 1px;
+  margin-top: 34px;
+  background: rgba(179, 119, 54, 0.55);
+}
+
+.gokturk-sticky p:last-child {
+  max-width: 460px;
+}
+
+.gokturk-shot {
+  position: relative;
+  border: 1px solid rgba(21, 23, 19, 0.08);
+}
+
+.gokturk-shot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.gokturk-shot img {
+  filter: saturate(0.92) contrast(1.02);
+}
+
+@media (max-width: 980px) {
+  .gokturk-section::after {
+    inset: 34px 18px;
+    border-radius: 30px;
+  }
+
+  .gokturk-section::before {
+    left: 18px;
+    bottom: 18px;
+    font-size: 70px;
+  }
+}
