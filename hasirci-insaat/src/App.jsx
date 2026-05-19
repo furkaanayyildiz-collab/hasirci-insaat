@@ -103,30 +103,35 @@ export default function App() {
   <div className="editorial-intro">
     <p>GÖKTÜRK PROJESİ</p>
     <h2>
-      İç mekânda <br />
-      sakin lüks.
+      Yaşamın her alanında <br />
+      sessiz lüks.
     </h2>
   </div>
 
   {[
     {
-      image: "/images/gokturk/gokturk-banyo-hero.jpg",
-      title: "Göktürk Residence",
-      text: "Doğal taş yüzeyler, sıcak ahşap detaylar ve zamansız mimari dili.",
+      image: "/images/gokturk/gokturk-exterior-walkway.jpg",
+      title: "Peyzajla Bütünleşen Yaşam",
+      text: "Açık alanlar, yürüyüş aksları ve doğal dokular; Göktürk Projesi’nde günlük yaşamı daha ferah ve seçkin bir deneyime dönüştürür.",
     },
     {
-      image: "/images/gokturk/gokturk-banyo-detail.jpg",
-      title: "Malzeme Detayı",
-      text: "Yakın planda premium malzeme hissi ve rafine detay yaklaşımı.",
+      image: "/images/gokturk/gokturk-pool-wellness.jpg",
+      title: "Wellness Ayrıcalığı",
+      text: "Kapalı havuz ve dinlenme alanları, konforu yalnızca daire içinde değil; projenin tüm yaşam ritmine yayar.",
     },
     {
-      image: "/images/gokturk/gokturk-banyo-front.jpg",
-      title: "Sessiz Konfor",
-      text: "Sadelik, dinginlik ve uzun ömürlü yaşam anlayışı.",
+      image: "/images/gokturk/gokturk-living-room.jpg",
+      title: "Sakin İç Mekân Dili",
+      text: "Yumuşak ışık, sıcak tonlar ve rafine mobilya seçimiyle yaşam alanları sade ama güçlü bir lüks hissi sunar.",
+    },
+    {
+      image: "/images/gokturk/gokturk-master-bedroom.jpg",
+      title: "Kişisel Konfor Alanı",
+      text: "Master yatak odası; dingin renk paleti, özel aydınlatma ve güçlü malzeme diliyle kişisel bir kaçış alanı olarak tasarlanır.",
     },
   ].map((item, index) => (
     <motion.section
-      key={index}
+      key={item.title}
       className="editorial-panel"
       initial={{ opacity: 0, y: 90 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -134,7 +139,7 @@ export default function App() {
       transition={{ duration: 1 }}
     >
       <div className="editorial-image-wrap">
-        <img src={item.image} alt={item.title} />
+        <img src={item.image} alt={item.title} loading="lazy" />
       </div>
 
       <div className="editorial-content">
