@@ -1532,3 +1532,47 @@ button { font: inherit; }
     margin-top: 0;
   }
 }
+
+.architecture-copy {
+  position: relative;
+  overflow: hidden;
+}
+
+.architecture-copy::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(21,23,19,.08);
+  border-radius: 32px;
+  pointer-events: none;
+}
+
+.architecture-kicker {
+  margin-top: 54px !important;
+  color: rgba(21,23,19,.45) !important;
+  font-size: 12px !important;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+}
+
+.architecture-points {
+  margin-top: 34px;
+  display: grid;
+  gap: 14px;
+}
+
+.architecture-points span {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(21,23,19,.12);
+  color: rgba(21,23,19,.68);
+  font-size: 15px;
+  letter-spacing: .04em;
+}
+
+.architecture-points span::before {
+  content: "—";
+  color: rgba(21,23,19,.32);
+}
