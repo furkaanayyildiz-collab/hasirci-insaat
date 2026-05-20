@@ -252,57 +252,49 @@ useEffect(() => {
   ))}
 </section>
 
-      <section className="gokturk-section">
-        <div className="gokturk-story">
-    <div className="gokturk-label">
-      GÖKTÜRK PROJESİ
-    </div>
+      <section className="gokturk-section clean-gokturk-section">
+  <div className="clean-gokturk-copy">
+    <p className="section-kicker">Göktürk Projesi</p>
 
-    <h2>
-      Rafine detaylarla şekillenen sakin yaşam.
-    </h2>
+    <h2>Detaylarda konfor, malzemede zarafet.</h2>
 
     <p>
-      Göktürk projesinde iç mekân dili; doğal taş yüzeyler,
-      sıcak ahşap dokular ve yumuşak ışık katmanlarıyla
-      zamansız bir yaşam atmosferi oluşturur. Her detay,
-      konforu gösterişten uzak ama güçlü bir şekilde hissettirmek
-      için tasarlanmıştır.
+      Göktürk projesinde iç mekân dili; doğal taş yüzeyler, sıcak ahşap
+      dokular ve yumuşak ışık katmanlarıyla zamansız bir yaşam atmosferi
+      oluşturur.
     </p>
 
-    <div className="gokturk-details">
-      <div className="gokturk-detail">
-        <span>MALZEME</span>
-        <span>Doğal taş & sıcak ahşap</span>
+    <div className="clean-gokturk-specs">
+      <div>
+        <span>Malzeme</span>
+        <strong>Doğal taş & sıcak ahşap</strong>
       </div>
-
-      <div className="gokturk-detail">
-        <span>TASARIM DİLİ</span>
-        <span>Minimal & rafine</span>
+      <div>
+        <span>Tasarım Dili</span>
+        <strong>Minimal & rafine</strong>
       </div>
-
-      <div className="gokturk-detail">
-        <span>ATMOSFER</span>
-        <span>Sakin, seçkin, zamansız</span>
+      <div>
+        <span>Atmosfer</span>
+        <strong>Sakin, seçkin, zamansız</strong>
       </div>
     </div>
   </div>
 
-        <div className="gokturk-gallery">
-          {gokturkImages.map((image, index) => (
-            <motion.figure
-              key={image}
-              className={`gokturk-shot shot-${index + 1}`}
-              initial={{ opacity: 0, y: 80, rotate: index % 2 === 0 ? -1.5 : 1.5 }}
-              whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{ duration: 0.85, ease: 'easeOut', delay: index * 0.07 }}
-            >
-              <img src={image} alt={`Göktürk iç mekan detayı ${index + 1}`} loading="lazy" />
-            </motion.figure>
-          ))}
-        </div>
-      </section>
+  <div className="clean-gokturk-gallery">
+    {gokturkImages.map((image, index) => (
+      <motion.figure
+        key={image}
+        className={`clean-gokturk-shot clean-shot-${index + 1}`}
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.25 }}
+        transition={{ duration: 0.75, delay: index * 0.06 }}
+      >
+        <img src={image} alt={`Göktürk iç mekan detayı ${index + 1}`} loading="lazy" />
+      </motion.figure>
+    ))}
+  </div>
+</section>
 <section className="process-section">
   <div className="process-header">
     <p className="section-kicker">Hasırcı Süreci</p>
