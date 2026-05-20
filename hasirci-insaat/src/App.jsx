@@ -479,6 +479,19 @@ data-step={`0${index + 1}`}
         <Logo />
         <h2>Yeni bir yaşam standardı için ilk adımı atın.</h2>
         <a href="mailto:info@hasirci.com">İletişime geç <ArrowUpRight size={18} /></a>
+        <div className="footer-bottom">
+  <p>
+    © 2026 Hasırcı İnşaat. Tüm hakları saklıdır.
+  </p>
+
+  <div className="footer-links">
+    <a href="#top">Yukarı Dön</a>
+    <span>•</span>
+    <a href="mailto:info@hasirciinsaat.com">
+      İletişim
+    </a>
+  </div>
+</div>
       </footer>
     </main>
   )
