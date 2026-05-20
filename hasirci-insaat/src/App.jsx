@@ -431,40 +431,7 @@ data-step={`0${index + 1}`}
           <p>Site akışı bu yüzden sade: kullanıcı projeyi, avantajı ve iletişim adımını yorulmadan görür. Premium his; hareket, kompozisyon ve detay kalitesiyle verilir.</p>
         </div>
       </section>
-{activeProject && (
-  <section className="project-detail-page">
-    <button
-      className="project-detail-close"
-      onClick={() => setActiveProject(null)}
-    >
-      Geri dön
-    </button>
 
-    <div className="project-detail-hero">
-      <img src={activeProject.image} alt={activeProject.title} />
-
-      <div className="project-detail-copy">
-        <span>{activeProject.tag}</span>
-        <h2>{activeProject.title}</h2>
-        <p>
-          Hasırcı’nın seçkin yaşam anlayışını yansıtan bu proje; mimari kalite,
-          konfor ve zamansız detayları bir araya getirir.
-        </p>
-      </div>
-    </div>
-
-    <div className="project-detail-gallery">
-      {[
-        "/images/gokturk/gokturk-exterior-walkway.jpg",
-        "/images/gokturk/gokturk-pool-wellness.jpg",
-        "/images/gokturk/gokturk-living-room.jpg",
-        "/images/gokturk/gokturk-master-bedroom.jpg",
-      ].map((image, index) => (
-        <img key={image} src={image} alt={`${activeProject.title} galeri ${index + 1}`} />
-      ))}
-    </div>
-  </section>
-)}
       <footer id="iletisim" className="footer-section">
         <Logo />
         <h2>Yeni bir yaşam standardı için ilk adımı atın.</h2>
