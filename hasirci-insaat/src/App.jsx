@@ -295,6 +295,47 @@ useEffect(() => {
     ))}
   </div>
 </section>
+      <section id="mimari" className="signature-architecture-section">
+  <div className="signature-architecture-copy">
+    <p className="section-kicker">Mimari Yaklaşım</p>
+
+    <h2>
+      Gösterişten uzak,
+      <br />
+      kalıcı bir lüks dili.
+    </h2>
+
+    <p>
+      Hasırcı projelerinde mimari; yalnızca dış görünüşten ibaret değildir.
+      Yaşamın akışını kolaylaştıran planlama, doğal malzeme hissi ve zamansız
+      detaylarla güçlü bir bütünlük kurar.
+    </p>
+  </div>
+
+  <div className="signature-architecture-grid">
+    <div className="signature-architecture-card large">
+      <span>01</span>
+      <h3>Planlama</h3>
+      <p>Ferahlık, ışık ve kullanım kolaylığı önceliklidir.</p>
+    </div>
+
+    <div className="signature-architecture-card">
+      <span>02</span>
+      <h3>Malzeme</h3>
+      <p>Doğal taş, ahşap ve sıcak dokular dengeli şekilde kullanılır.</p>
+    </div>
+
+    <div className="signature-architecture-card image-card">
+      <img src="/images/gokturk/gokturk-living-room.jpg" alt="Hasırcı mimari detay" />
+    </div>
+
+    <div className="signature-architecture-card">
+      <span>03</span>
+      <h3>Atmosfer</h3>
+      <p>Sessiz, seçkin ve uzun ömürlü bir yaşam hissi hedeflenir.</p>
+    </div>
+  </div>
+</section>
 <section className="process-section">
   <div className="process-header">
     <p className="section-kicker">Hasırcı Süreci</p>
