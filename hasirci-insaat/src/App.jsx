@@ -287,11 +287,6 @@ useEffect(() => {
       </div>
     </div>
   </div>
-        <div className="gokturk-sticky">
-          <p className="section-kicker">Göktürk Projesi</p>
-          <h2>Detaylarda konfor, malzemede zarafet.</h2>
-          <p>İç mekanda sıcak ışık, doğal doku ve rafine malzeme seçimiyle sakin bir lüks dili kurulur.</p>
-        </div>
 
         <div className="gokturk-gallery">
           {gokturkImages.map((image, index) => (
