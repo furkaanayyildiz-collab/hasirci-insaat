@@ -398,6 +398,30 @@ data-step={`0${index + 1}`}
 </section>
 
       <section id="mimari" className="architecture-section">
+  <div className="architecture-image">
+    <img src={gokturkImages[3]} alt="Hasırcı iç mekan mimarisi" loading="lazy" />
+  </div>
+
+  <div className="architecture-copy">
+    <Logo dark />
+
+    <p className="architecture-kicker">Mimari Yaklaşım</p>
+
+    <h2>Konforu detaylarda hissettiren yaşam alanları.</h2>
+
+    <p>
+      Hasırcı projelerinde lüks; gösterişli ifadelerden değil, doğru planlanmış
+      hacimlerden, seçilmiş malzemelerden ve günlük hayatı kolaylaştıran
+      detaylardan doğar.
+    </p>
+
+    <div className="architecture-points">
+      <span>Doğal malzeme dili</span>
+      <span>Sakin ve zamansız atmosfer</span>
+      <span>Fonksiyonel yaşam kurgusu</span>
+    </div>
+  </div>
+</section>
         <div className="architecture-image">
           <img src={gokturkImages[3]} alt="Hasırcı iç mekan mimarisi" loading="lazy" />
         </div>
