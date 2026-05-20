@@ -478,7 +478,9 @@ data-step={`0${index + 1}`}
       <footer id="iletisim" className="footer-section">
         <Logo />
         <h2>Yeni bir yaşam standardı için ilk adımı atın.</h2>
-        <a href="mailto:info@hasirci.com">İletişime geç <ArrowUpRight size={18} /></a>
+       <a href="mailto:info@hasirciinsaat.com.tr">
+  İletişim
+</a>
         <div className="footer-bottom">
   <p>
     © 2026 Hasırcı İnşaat. Tüm hakları saklıdır.
