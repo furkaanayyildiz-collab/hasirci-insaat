@@ -397,17 +397,6 @@ data-step={`0${index + 1}`}
   ))}
 </section>
 
-     
-        <div className="architecture-image">
-          <img src={gokturkImages[3]} alt="Hasırcı iç mekan mimarisi" loading="lazy" />
-        </div>
-        <div className="architecture-copy">
-          <Logo dark />
-          <h2>Lüks, anlaşılır olduğunda daha güçlüdür.</h2>
-          <p>Site akışı bu yüzden sade: kullanıcı projeyi, avantajı ve iletişim adımını yorulmadan görür. Premium his; hareket, kompozisyon ve detay kalitesiyle verilir.</p>
-        </div>
-      </section>
-
       <footer id="iletisim" className="footer-section">
         <Logo />
         <h2>Yeni bir yaşam standardı için ilk adımı atın.</h2>
